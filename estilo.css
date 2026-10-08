@@ -1,0 +1,341 @@
+/* ============================================================
+   RESET Y BASE
+   ============================================================ */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: #fafafa;
+  color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.wrap { max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 0;
+  margin-bottom: 24px;
+}
+.header-inner {
+  max-width: 1400px; margin: 0 auto; padding: 0 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px;
+}
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-logo { height: 48px; width: auto; max-width: 180px; object-fit: contain; display: block; }
+.brand-text h1 { font-size: 16px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
+.brand-text p { font-size: 12px; color: #6b7280; margin: 2px 0 0 0; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ============================================================
+   BOTONES
+   ============================================================ */
+button, .btn {
+  font-family: inherit; font-size: 13px; padding: 6px 12px;
+  border: 1px solid #d1d5db; background: #ffffff; color: #111827;
+  border-radius: 6px; cursor: pointer;
+  transition: background .12s, border-color .12s;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+button:hover, .btn:hover { background: #f9fafb; border-color: #9ca3af; }
+button.primary { background: #111827; color: #ffffff; border-color: #111827; }
+button.primary:hover { background: #000; border-color: #000; }
+button.danger { color: #b91c1c; border-color: #fca5a5; }
+button.danger:hover { background: #fef2f2; }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+.icon { width: 14px; height: 14px; }
+
+/* ============================================================
+   CONFIG
+   ============================================================ */
+.config {
+  background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px;
+  padding: 16px; margin-bottom: 24px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.field label {
+  display: block; font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: #6b7280; margin-bottom: 4px;
+}
+.field input, .field-select {
+  width: 100%; padding: 7px 10px; border: 1px solid #d1d5db;
+  border-radius: 6px; font-size: 14px; font-family: inherit;
+  background: #ffffff; color: #111827;
+}
+.field input:focus, .field-select:focus { outline: none; border-color: #111827; }
+.field .help { font-size: 11px; color: #9ca3af; margin-top: 4px; }
+.field .help.ok { color: #059669; }
+
+/* ============================================================
+   PANEL
+   ============================================================ */
+.panel {
+  background: #ffffff; border: 1px solid #e5e7eb;
+  border-radius: 8px; overflow: hidden; margin-bottom: 24px;
+}
+.panel-head {
+  padding: 14px 16px; border-bottom: 1px solid #e5e7eb;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 8px;
+}
+.panel-head h2 { font-size: 14px; font-weight: 600; margin: 0; }
+.panel-head-left { display: flex; align-items: center; gap: 12px; }
+.indicador-orden {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 10px; border-radius: 999px;
+  background: #f3f4f6; color: #374151; border: 1px solid #e5e7eb;
+  font-size: 11px; font-weight: 600;
+}
+
+/* ============================================================
+   BLOQUES
+   ============================================================ */
+.empty-bloques {
+  padding: 24px; text-align: center; color: #9ca3af; font-size: 12.5px;
+  background: #fafafa; border: 1px dashed #d1d5db; border-radius: 6px;
+}
+.bloque {
+  border: 1px solid #e5e7eb; border-radius: 8px;
+  padding: 12px 14px; margin-bottom: 10px; background: #fff;
+}
+.bloque-head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px;
+}
+.bloque-tipo {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: #6b7280;
+  background: #f3f4f6; padding: 2px 8px;
+  border-radius: 999px; border: 1px solid #e5e7eb;
+}
+.bloque-acciones { display: flex; gap: 4px; }
+.bloque-acciones button { padding: 3px 7px; font-size: 11px; line-height: 1; }
+
+.bloque-textarea {
+  width: 100%; min-height: 70px; padding: 8px 10px;
+  border: 1px solid #d1d5db; border-radius: 6px;
+  font-size: 13px; font-family: inherit; background: #fff;
+  color: #111827; resize: vertical; line-height: 1.5;
+}
+.bloque-textarea:focus { outline: none; border-color: #111827; }
+
+.bloque-items-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.bloque-item-row { display: flex; gap: 6px; align-items: center; }
+.bloque-item-row .num {
+  width: 24px; text-align: center; font-weight: 600;
+  color: #6b7280; font-size: 12px; flex-shrink: 0;
+}
+.bloque-item-row input {
+  flex: 1; padding: 7px 10px; border: 1px solid #d1d5db;
+  border-radius: 6px; font-size: 13px; font-family: inherit;
+  background: #fff; color: #111827;
+}
+.bloque-item-row input:focus { outline: none; border-color: #111827; }
+.bloque-item-row .btn-mini { padding: 3px 7px; font-size: 11px; line-height: 1; }
+.bloque-add-item {
+  background: #fff; border: 1px dashed #d1d5db; color: #374151;
+  padding: 6px 12px; font-size: 12px; border-radius: 6px;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 5px;
+  font-family: inherit;
+}
+.bloque-add-item:hover { background: #f9fafb; border-color: #9ca3af; }
+
+/* ============================================================
+   NOTA — documento imprimible
+   ============================================================ */
+.nota-doc {
+  background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px;
+  padding: 40px 48px; font-size: 13px; color: #111827;
+  line-height: 1.65; max-width: 800px; margin: 0 auto;
+  word-wrap: break-word; overflow-wrap: break-word;
+}
+.nota-doc * { max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }
+
+.nota-header {
+  position: relative; padding-top: 10px; padding-bottom: 18px;
+  margin-bottom: 28px; border-bottom: 2px solid #111827; min-height: 60px;
+}
+.nota-header .logo-santafe {
+  position: absolute; top: 6px; right: 0;
+  height: 38px; width: auto; object-fit: contain;
+}
+.nota-header .logo-hospital {
+  display: block; margin: 0 auto 14px auto;
+  height: 68px; width: auto; object-fit: contain;
+}
+.nota-header h3 {
+  text-align: center; font-size: 15px; font-weight: 700;
+  margin: 0 0 4px 0; letter-spacing: 0.06em; color: #111827;
+}
+.nota-header .sub { text-align: center; font-size: 11.5px; color: #6b7280; }
+
+.nota-titulo-doc {
+  text-align: center; font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  margin: 0 0 24px 0; padding: 6px 0;
+  border-top: 1px solid #d1d5db; border-bottom: 1px solid #d1d5db;
+}
+
+.nota-lugar { text-align: right; margin: 0 0 24px 0; font-size: 13px; }
+
+.nota-ficha {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6px 18px; font-size: 12px;
+  margin: 0 0 24px 0; padding: 12px 14px;
+  background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px;
+}
+.nota-ficha p { margin: 0; }
+.nota-ficha strong { color: #111827; }
+.nota-ficha .full { grid-column: 1 / -1; }
+
+.nota-bloque { margin: 0 0 16px 0; }
+.nota-bloque p { margin: 0; text-align: justify; }
+.nota-bloque .titulo-bloque {
+  font-weight: 700; font-size: 12.5px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  margin-bottom: 4px; color: #111827;
+}
+.nota-bloque.lista ol {
+  margin: 0; padding-left: 26px;
+  font-size: 13px; line-height: 1.75;
+}
+.nota-bloque.lista li { margin-bottom: 4px; text-align: justify; }
+
+.nota-remitente {
+  margin-top: 48px; text-align: right; font-size: 13px;
+}
+.nota-remitente p { margin: 0 0 3px 0; }
+.nota-remitente .cargo { font-size: 11.5px; color: #6b7280; }
+
+.nota-firma { margin-top: 60px; display: flex; justify-content: flex-end; }
+.nota-firma .firma-box {
+  border-top: 1px solid #111827; width: 280px;
+  text-align: center; padding-top: 8px;
+  font-size: 11px; color: #374151;
+}
+.nota-firma .firma-box strong { font-size: 12px; color: #111827; }
+
+.nota-legal {
+  margin-top: 36px; padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 9.5px; color: #6b7280;
+  line-height: 1.5; text-align: justify;
+}
+.nota-legal strong { color: #374151; }
+
+/* ============================================================
+   ZONA DE IMPRESIÓN
+   ============================================================ */
+.zona-impresion { display: none; }
+
+/* ============================================================
+   UTILIDADES
+   ============================================================ */
+.hidden { display: none !important; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+
+/* ============================================================
+   FOOTER LEGAL
+   ============================================================ */
+.footer-legal {
+  margin-top: 48px; padding: 32px 0 24px 0;
+  border-top: 2px solid #e5e7eb; font-size: 12px;
+  color: #4b5563; line-height: 1.6;
+}
+.footer-inner { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+.footer-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 999px;
+  background: #f3f4f6; border: 1px solid #e5e7eb;
+  color: #374151; font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+.footer-legal h4 { font-size: 14px; font-weight: 700; color: #111827; margin: 0 0 18px 0; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px 28px; margin-bottom: 24px;
+}
+.footer-grid h5 {
+  font-size: 11.5px; font-weight: 700; color: #111827;
+  margin: 0 0 4px 0; text-transform: uppercase; letter-spacing: 0.03em;
+}
+.footer-grid p { margin: 0; font-size: 11.5px; color: #4b5563; }
+.footer-bottom {
+  padding-top: 16px; border-top: 1px solid #e5e7eb;
+  font-size: 11px; color: #6b7280; text-align: center;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .nota-doc { padding: 24px 18px; }
+  .nota-ficha { grid-template-columns: 1fr; }
+  .nota-header .logo-santafe { height: 28px; }
+  .nota-header .logo-hospital { height: 54px; }
+}
+
+/* ============================================================
+   IMPRESIÓN
+   ============================================================ */
+@media print {
+  @page { size: A4 portrait; margin: 15mm; }
+  html, body {
+    background: #fff !important; width: 100%;
+    margin: 0; padding: 0;
+    font-size: 11.5pt; color: #000;
+  }
+  .no-print, header, .config, .panel-head, .footer-legal { display: none !important; }
+  .wrap { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+  .panel { display: none !important; }
+  #zonaImpresion { display: block !important; }
+
+  .nota-doc {
+    width: 100%; max-width: 100%; padding: 0; margin: 0;
+    border: none; border-radius: 0; color: #000;
+    font-size: 11.5pt; line-height: 1.5;
+    word-wrap: break-word; overflow-wrap: break-word;
+  }
+  .nota-header {
+    border-bottom: 2px solid #000 !important;
+    padding-top: 0; padding-bottom: 12px; margin-bottom: 20px;
+  }
+  .nota-header .logo-santafe { height: 30px !important; top: 0; }
+  .nota-header .logo-hospital { height: 60px !important; margin-bottom: 8px; }
+  .nota-header h3 { font-size: 13pt !important; color: #000 !important; }
+  .nota-header .sub { font-size: 9.5pt !important; }
+
+  .nota-titulo-doc {
+    font-size: 11.5pt !important; margin-bottom: 18px !important;
+    padding: 5px 0 !important; border-color: #000 !important;
+  }
+  .nota-lugar { margin-bottom: 16px !important; font-size: 11.5pt !important; }
+
+  .nota-ficha {
+    background: #fff !important; border: 1px solid #000 !important;
+    font-size: 10.5pt !important; padding: 10px 12px !important;
+    margin-bottom: 18px !important; page-break-inside: avoid;
+  }
+  .nota-bloque { margin-bottom: 12px !important; page-break-inside: avoid; }
+  .nota-bloque .titulo-bloque { font-size: 11pt !important; }
+  .nota-bloque p { font-size: 11.5pt !important; }
+  .nota-bloque.lista ol { font-size: 11.5pt !important; line-height: 1.55 !important; }
+
+  .nota-remitente { margin-top: 36px !important; font-size: 11.5pt !important; }
+  .nota-firma { margin-top: 50px !important; page-break-inside: avoid; }
+  .nota-firma .firma-box { width: 260px; font-size: 9.5pt; }
+  .nota-legal { font-size: 8.5pt !important; margin-top: 28px !important; }
+}
